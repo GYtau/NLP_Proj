@@ -1,8 +1,13 @@
 # NLP_Proj
-**Students**: Irena Aleshin 328814470 Gilad Yekuel 206035222 Yuval Ziv 207900283
+**Students**: Irina Aleshin 328814470 Gilad Yekuel 206035222 Yuval Ziv 207900283
 
 In this project, we implemented LSTM model and tested Word2Vec and Fastext embedding models.
 The main goal of this project was a classification problem- classify comments as positive or negative.
+
+Before we trained the embedding models we prepared our data to fit as an input for embedding and as an input to the LSTM model.
+The data we got was separeted in 2 directories - pos and neg (positive comments and negative accordingly). Each directory had txt files with comments in it.
+We cleaned the words in the comments from all the symbols that are not letters, checked that the words are more than one letter, lowercased and are not part of stop words (from nltk library). Then we made a list for each "clean" file (comment). The positive comments labeled as 1, and negative as 0. 
+Also, we had to make a padding for the comments (that later on we converted to tensors) so they will be the same dimension for the model.
 
 Our project included 2 embedding models: Word2vec, Fasttext.
 We did 30 epochs for each embedding model. 
